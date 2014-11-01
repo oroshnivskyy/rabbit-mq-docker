@@ -12,6 +12,6 @@ RUN /usr/sbin/rabbitmq-plugins enable rabbitmq_management
 RUN apt-get clean
 ADD set-rabbit-password.sh /set-rabbit-password.sh
 RUN chmod 755 ./*.sh
-config
+
 EXPOSE 5672 15672 4369
 CMD ["/run.sh"]

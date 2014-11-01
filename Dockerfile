@@ -10,6 +10,7 @@ RUN apt-get -qq update
 RUN apt-get -qq -y install rabbitmq-server
 RUN /usr/sbin/rabbitmq-plugins enable rabbitmq_management
 RUN apt-get clean
+ADD run.sh /run.sh
 ADD set-rabbit-password.sh /set-rabbit-password.sh
 RUN chmod 755 ./*.sh
 
